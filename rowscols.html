@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scripts/bootstrap.css">
+    <title>Rows Cols Bootstrap</title>
+</head>
+<body>
+    <div data-include="nav"></div>
+    <div class="container">
+    <h1>Bootstrap Grid System</h1>
+    <p><small><a href="https://getbootstrap.com/docs/5.1/layout/grid/">Learn More at GetBootstrap...</a></small></p>
+
+    <br>
+        <h1>Example: 13 Columns without any sizing: class="col"</h1>
+        <p>
+            <small>
+                If you do not give the col a relative width number (ie col-4) then the contents of the column
+                will dictate how many can fit in a row.
+            </small>
+        </p>
+        <div class="row border">
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+            <div class="col border">
+                <br><br><br><br>
+            </div>
+        </div>
+
+<xmp>
+        <div class="row border">
+            <div class="col border">
+
+            </div>
+            ...
+            <div class="col border">
+
+            </div>
+        </div>
+</xmp>
+
+
+        <h1>Example: Exactly Three Columns: class="col-4"</h1>
+        <p>
+            <small>
+                A column is sperated in to 12 regions per row. You can designate the relative width of a column is by 
+                giving it a number between 1 and 12.
+            </small>
+        </p>
+        <div class="row border">
+            <div class="col-4 border">
+                <br><br><br><br>
+            </div>
+            <div class="col-4 border">
+                <br><br><br><br>
+            </div>
+            <div class="col-4 border">
+                <br><br><br><br>
+            </div>
+        </div>
+<xmp>
+    <div class="row border">
+        <div class="col-4 border">
+            
+        </div>
+        <div class="col-4 border">
+            
+        </div>
+        <div class="col-4 border">
+            
+        </div>
+    </div>
+</xmp>
+
+
+        <h1>Example: Spillover Columns</h1>
+        <div class="row border">
+            <div class="col-1 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-1<br><br></p>
+            </div>
+            <div class="col-2 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-2<br><br></p>
+            </div>
+            <div class="col-3 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-3<br><br></p>
+            </div>
+            <div class="col-4 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-4<br><br></p>
+            </div>
+            <div class="col-5 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-5<br><br></p>
+            </div>
+            <div class="col-4 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-4<br><br></p>
+            </div>
+            <div class="col-3 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-3<br><br></p>
+            </div>
+            <div class="col-2 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-2<br><br></p>
+            </div>
+            <div class="col-1 p-0 border">
+                <p class="bg-secondary m-0 text-center"><br><br>col-1<br><br></p>
+            </div>
+        </div>
+
+<xmp>
+        <div class="row border">
+            <div class="col-1 border">
+
+            </div>
+            <div class="col-2 border">
+
+            </div>
+            <div class="col-3 border">
+
+            </div>
+            <div class="col-4 border">
+
+            </div>
+            <div class="col-5 border">
+
+            </div>
+            <div class="col-4 border">
+
+            </div>
+            <div class="col-3 border">
+
+            </div>
+            <div class="col-2 border">
+
+            </div>
+            <div class="col-1 border">
+
+            </div>
+        </div>
+</xmp>
+
+
+        <h1>Example: "Responsive" Columns that break depending on screen size</h1>
+        <p>
+            <small>
+                Make the browser window smaller and see the the cells stack instead of in a row. Play with the breaks by screen size
+                (sm, md, lg, xl, xxl) and with the relative size for example col-md-4. The purpose of this is to change the 
+                layout for different sized screens like phones.
+            </small>
+        </p>
+        <div class="row border">
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+                <br><br><br><br>
+            </div>
+        </div>
+
+<xmp>
+    <div class="row border">
+        <!--In this case of empty cells, on an xxl screen there will be a row of 24 columns, 
+            on a lg screen there will be rows of 12 columns,
+            6 columns on a lg screen, 3 on a md screen, 2 on sm, and 1 on xs-->
+        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+
+        </div>
+        ...
+        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+
+        </div>
+    </div>
+</xmp>
+
+
+        <h1>Example: Nested rows</h1>
+        <div class="row border">
+            <div class="col-4 border">
+                <h3>Padding and Margins</h3>
+                <p>
+                    You can use margins and padding to control how content is placed within a div. Padding on a div 
+                    will push content against the edge of the div.  Margins on a 'p' tag can do the same thing. You 
+                    can use values 1-5. m-5 and p5 apply all around. mt/pt is top. mb/pb is bottom. ms/ps is start of left. 
+                    me/pe is end of left. my/py is top and bottom. mx/px is right and left.
+                </p>
+            </div>
+            <div class="col-8 border">
+                <div class="row p-0">
+                    <div class="col-6 p-0 border">
+                        <p class="bg-primary m-5 text-center"><br><br>m-5<br>Margins on all 4 sides<br><br></p>
+                    </div>
+                    <div class="col-6 p-0 border text-center">
+                        <p class="bg-primary my-5"><br><br>my-5<br>margins top (mt) and bottom (mb)<br><br></p>
+                    </div>
+                    <div class="col-6 p-0 border text-center">
+                        <p class="bg-primary ms-5"><br><br>ms-5<br>Margin on the left (start)<br><br></p>
+                    </div>
+                    <div class="col-6 p-0 border text-center">
+                        <p class="bg-primary me-5"><br><br>me-5<br>Margin on the right (end)<br><br></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<xmp>
+    <div class="row border">
+        <!--col-4 defines this as 1/3 of a row.-->
+        <div class="col-4 border">
+
+        </div>
+        <div class="col-8 border">
+            <div class="row">
+                <!--col-6 defines each column as 1/2 a row-->
+                <div class="col-6 border">
+
+                </div>
+                <div class="col-6 border">
+
+                </div>
+                <div class="col-6 border">
+
+                </div>
+                <div class="col-6 border">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</xmp>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</body>
+</html>
