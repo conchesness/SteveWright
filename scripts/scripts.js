@@ -4,6 +4,8 @@ $(function () {
       var file = 'views/' + $(this).data('include') + '.html'
       $(this).load(file)
     })
+    document.title = "OT CS Capstone"
+
   })
 
   
