@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <title>OT CS Capstone</title>
+</head>
+<body>
+  <div data-include="nav"></div>
+  <div class="container">
+    <h1>Javascripts tips and tricks</h1>
+    <h3>Include a navbar in every page</h3>
+    <p>
+      You can create a file that only contains the code you need for a navbar and 
+      then have that file automatically included in any page. There are three components to make this work.
+    </p>
+    <ol>
+      <li>
+        Create a local script file called "scripts.js" (or whatever.js that you want.) Include the code below in 
+        that file. Put that file in a a folder called scripts (or what ever you want to call it) at the root level 
+        of your website. Then be sure that file is referenced on every page with the following line of code on every page.
+        Put this code right after your bootstrap javascript code at the bottom of the page right before the closing body tag.
+        <br><br>
+        <p><b>Include this in every file</b></p>
+        <xmp>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+          <script type="text/javascript" src="scripts/scripts.js"></script>
+        </xmp>
+        <p><b>javascript.js code</b></br>
+        <small>notice "views/" and "scripts/scripts.js". If you do different names for files and folders be sure to change
+          the references in this file.</small></p>
+        <xmp>
+          $(function () {
+            var includes = $('[data-include]')
+            $.each(includes, function () {
+              var file = 'views/' + $(this).data('include') + '.html'
+              $(this).load(file)
+            })
+            document.title = "OT CS Capstone"
+          })
+        </xmp>
+
+      </li>
+      <li>
+        Create a file called "navbar.html" (or what ever you want to call it) and place it in a folder called
+        views. Put your navbar code in that file.
+      </li>
+      <li>
+        On the page where you want the navber to show up place this code:
+        <xmp><div data-include="nav"></div></xmp>
+      </li>
+    </ol>
+
+    <h3>How to show/hide divs</h3>
+
+    <form>
+      <select name="divdropdown" id="divdropdown">
+        <option value="">---</option>
+        <option value="div1">div1</option>
+        <option value="div2">div2</option>
+        <option value="both">both</option>
+      </select>
+    </form>
+
+    <div class="border bg-primary" id="div1">
+      <h1>This is Div 1</h1>
+    </div>
+
+    <div class="border bg-secondary" id="div2">
+      <h1>This is Div 2</h1>
+    </div>
+
+    <p><b>The script triggers when the pulldown changes</b></p>
+    <xmp>
+      <form>
+        <select name="divdropdown" id="divdropdown">
+          <option value="">---</option>
+          <option value="div1">div1</option>
+          <option value="div2">div2</option>
+          <option value="both">both</option>
+        </select>
+      </form>
+    </xmp>
+    <p>
+      <b>These are the divs.</b><br>
+      <small>Pay attention to the ID names.</small>
+    </p>
+    <xmp>
+      <div class="border bg-primary" id="div1">
+        <h1>This is Div 1</h1>
+      </div>
+  
+      <div class="border bg-secondary" id="div2">
+        <h1>This is Div 2</h1>
+      </div>
+      </xmp>  
+      <p><b>The is the javascript code that goes at the bottom of the page.</b></p>
+      <xmp>
+      <script type="text/javascript">
+        jQuery(document).ready(function() {
+          $('#div1').show();
+          $('#div2').show();
+
+          $("#divdropdown").change(function() {
+            if($(this).val().toLowerCase() == 'div1') {
+              $('#div1').show();
+              $('#div2').hide();
+            } else if ($(this).val().toLowerCase() == 'div2') {
+              $('#div2').show();
+              $('#div1').hide();            }
+          });
+       });
+      </script>
+    </xmp>
+
+  </div>
+
+  <!--Bootstrap and other JS scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script type="text/javascript">
+
+      jQuery(document).ready(function() {
+        $('#div1').hide();
+        $('#div2').hide();
+
+        $("#divdropdown").change(function() {
+          if($(this).val().toLowerCase() == 'div1') {
+            $('#div1').show();
+            $('#div2').hide();
+          } else if ($(this).val().toLowerCase() == 'div2') {
+            $('#div2').show();
+            $('#div1').hide();            
+          } else if ($(this).val().toLowerCase() == 'both') {
+            $('#div2').show();
+            $('#div1').show();  
+          }
+        }); 
+       
+     });
+    
+    </script>
+</body>
+</html>

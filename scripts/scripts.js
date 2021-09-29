@@ -7,5 +7,3 @@ $(function () {
     document.title = "OT CS Capstone"
 
   })
-
-  
