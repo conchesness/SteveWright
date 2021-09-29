@@ -55,29 +55,36 @@
     </ol>
 
     <h3>How to show/hide divs</h3>
-
-    <form>
-      <select name="divdropdown" id="divdropdown">
-        <option value="">---</option>
-        <option value="div1">div1</option>
-        <option value="div2">div2</option>
-        <option value="both">both</option>
-      </select>
-    </form>
-
-    <div class="border bg-primary" id="div1">
-      <h1>This is Div 1</h1>
-    </div>
-
-    <div class="border bg-secondary" id="div2">
-      <h1>This is Div 2</h1>
+    <p>
+      <em>You can use javascrip and JQuery to make your page dynamic.  This should look familiar from Sophomore year.
+      This example is "event based".  You can make things happen based on user actions ot based on time of day 
+      or other events that a computer can know.</em>
+    </p>
+    <div class="border border-3 p-3">
+      <form class="mb-3">
+        Change the dropdown to see it work! <br>
+        <select class="form-select" name="divdropdown" id="divdropdown">
+          <option selected>---</option>
+          <option value="div1">div1</option>
+          <option value="div2">div2</option>
+          <option value="both">both</option>
+        </select>
+      </form>
+      <div class="border bg-primary my-3" id="div1">
+        <h1>This is Div 1</h1>
+      </div>
+  
+      <div class="border bg-secondary mb-3" id="div2">
+        <h1>This is Div 2</h1>
+      </div>
     </div>
 
     <p><b>The script triggers when the pulldown changes</b></p>
     <xmp>
       <form>
-        <select name="divdropdown" id="divdropdown">
-          <option value="">---</option>
+        Change the dropdown to see it work! <br>
+        <select class="form-select" name="divdropdown" id="divdropdown">
+          <option selected>---</option>
           <option value="div1">div1</option>
           <option value="div2">div2</option>
           <option value="both">both</option>
