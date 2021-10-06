@@ -108,21 +108,27 @@
       </xmp>  
       <p><b>The is the javascript code that goes at the bottom of the page.</b></p>
       <xmp>
-      <script type="text/javascript">
-        jQuery(document).ready(function() {
-          $('#div1').show();
-          $('#div2').show();
+        <script type="text/javascript">
 
-          $("#divdropdown").change(function() {
-            if($(this).val().toLowerCase() == 'div1') {
-              $('#div1').show();
-              $('#div2').hide();
-            } else if ($(this).val().toLowerCase() == 'div2') {
-              $('#div2').show();
-              $('#div1').hide();            }
-          });
-       });
-      </script>
+          jQuery(document).ready(function() {
+            $('#div1').hide();
+            $('#div2').hide();
+    
+            $("#divdropdown").change(function() {
+              if($(this).val().toLowerCase() == 'div1') {
+                $('#div1').show();
+                $('#div2').hide();
+              } else if ($(this).val().toLowerCase() == 'div2') {
+                $('#div2').show();
+                $('#div1').hide();            
+              } else if ($(this).val().toLowerCase() == 'both') {
+                $('#div2').show();
+                $('#div1').show();  
+              }
+            }); 
+         });
+        
+        </script>
     </xmp>
 
   </div>
