@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/styles.css">
+  <title>OT CS Capstone</title>
+</head>
+<body>
+  <div class="container">
+  <div data-include="nav"></div>
+
+  <h1>Display a page based on form results</h1>
+
+  <form action="conditionalforward.html" method="get">
+      <label for="pickanum">Where do you want to go?</label>
+      <select class="form-control" id="pickanum" name="destination" required>
+        <option selected></option>
+        <option>forms</option>
+        <option>navbar</option>
+      </select>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p>Slightly different script</p>
+  <small>
+    Note that the if block can't have an 'else' it must all be 'else if'. 
+    With just 'else' it will never show the form because it will 
+    ALWAYS forward to the page after the 'else' statement because the form has not yet been submitted. 
+  </small>
+<br>
+  <b>Form Code</b>
+  <xmp>
+    <form action="conditionalforward.html" method="get">
+      <label for="pickanum">Where do you want to go?</label>
+        <select class="form-control" id="pickanum" name="destination" required>
+          <option selected></option>
+          <option>forms</option>
+          <option>navbar</option>
+        </select>
+      <button type="submit">Submit</button>
+    </form>
+  </xmp>
+
+  <b>Script</b>
+  <xmp>
+    <script type="text/javascript">
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const destination = urlParams.get('destination');
+
+      if (destination == "forms") {
+        window.location.replace("forms.html");
+      } else if (destination == "navbar") {
+        window.location.replace("navbar.html");
+      }
+  
+    </script>
+  </xmp>
+
+</div>
+  <!--Bootstrap and other JS scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+    <script type="text/javascript">
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const destination = urlParams.get('destination');
+
+      if (destination == "forms") {
+        window.location.replace("forms.html");
+      } else if (destination == "navbar") {
+        window.location.replace("navbar.html");
+      }
+  
+    </script>
+
+</body>
+</html>
