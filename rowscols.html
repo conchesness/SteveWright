@@ -7,6 +7,7 @@
   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/prism.css">
     <title>OT CS Capstone</title></head>
 <body>
     <div data-include="nav"></div>
@@ -46,31 +47,31 @@
         </div>
     </div>
 
-<xmp>
-    <div class="row border">
-        <!--col-4 defines this as 1/3 of a row.-->
-        <div class="col-4 border">
+<pre class="language-markup"><code>
+    &lt;div class="row border">
+        &lt;!--col-4 defines this as 1/3 of a row.-->
+        &lt;div class="col-4 border">
 
-        </div>
-        <div class="col-8 border">
-            <div class="row">
-                <!--col-6 defines each column as 1/2 a row-->
-                <div class="col-6 border">
+        &lt;/div>
+        &lt;div class="col-8 border">
+            &lt;div class="row">
+                &lt;!--col-6 defines each column as 1/2 a row-->
+                &lt;div class="col-6 border">
 
-                </div>
-                <div class="col-6 border">
+                &lt;/div>
+                &lt;div class="col-6 border">
 
-                </div>
-                <div class="col-6 border">
+                &lt;/div>
+                &lt;div class="col-6 border">
 
-                </div>
-                <div class="col-6 border">
+                &lt;/div>
+                &lt;div class="col-6 border">
 
-                </div>
-            </div>
-        </div>
-    </div>
-</xmp>
+                &lt;/div>
+            &lt;/div>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
         <h1>Example: 13 Columns without any sizing: class="col"</h1>
         <p>
@@ -121,17 +122,17 @@
             </div>
         </div>
 
-<xmp>
-        <div class="row border">
-            <div class="col border">
+<pre class="language-markup"><code>
+    &lt;div class="row border">
+        &lt;div class="col border">
 
-            </div>
-            ...
-            <div class="col border">
+        &lt;/div>
+        ...
+        &lt;div class="col border">
 
-            </div>
-        </div>
-</xmp>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
 
         <h1>Example: Exactly Three Columns: class="col-4"</h1>
@@ -152,19 +153,19 @@
                 <br><br><br><br>
             </div>
         </div>
-<xmp>
-    <div class="row border">
-        <div class="col-4 border">
+<pre class="language-markup"><code>
+    &lt;div class="row border">
+        &lt;div class="col-4 border">
             
-        </div>
-        <div class="col-4 border">
+        &lt;/div>
+        &lt;div class="col-4 border">
             
-        </div>
-        <div class="col-4 border">
+        &lt;/div>
+        &lt;div class="col-4 border">
             
-        </div>
-    </div>
-</xmp>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
 
         <h1>Example: Spillover Columns</h1>
@@ -198,37 +199,37 @@
             </div>
         </div>
 
-<xmp>
-        <div class="row border">
-            <div class="col-1 border">
+<pre class="language-markup"><code>
+    &lt;div class="row border">
+        &lt;div class="col-1 border">
 
-            </div>
-            <div class="col-2 border">
+        &lt;/div>
+        &lt;div class="col-2 border">
 
-            </div>
-            <div class="col-3 border">
+        &lt;/div>
+        &lt;div class="col-3 border">
 
-            </div>
-            <div class="col-4 border">
+        &lt;/div>
+        &lt;div class="col-4 border">
 
-            </div>
-            <div class="col-5 border">
+        &lt;/div>
+        &lt;div class="col-5 border">
 
-            </div>
-            <div class="col-4 border">
+        &lt;/div>
+        &lt;div class="col-4 border">
 
-            </div>
-            <div class="col-3 border">
+        &lt;/div>
+        &lt;div class="col-3 border">
 
-            </div>
-            <div class="col-2 border">
+        &lt;/div>
+        &lt;div class="col-2 border">
 
-            </div>
-            <div class="col-1 border">
+        &lt;/div>
+        &lt;div class="col-1 border">
 
-            </div>
-        </div>
-</xmp>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
 
         <h1>Example: "Responsive" Columns that break depending on screen size</h1>
@@ -314,36 +315,39 @@
             </div>
         </div>
 
-<xmp>
-    <div class="row border">
-        <!--In this case of empty cells, on an xxl screen there will be a row of 24 columns, 
+<pre class="language-markup"><code>
+    &lt;div class="row border">
+        &lt;!--In this case of empty cells, on an xxl screen there will be a row of 24 columns, 
             on a lg screen there will be rows of 12 columns,
             6 columns on a lg screen, 3 on a md screen, 2 on sm, and 1 on xs-->
-        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+        &lt;div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
 
-        </div>
+        &lt;/div>
         ...
-        <div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
+        &lt;div class="col-sm-6 col-md-4 col-lg-2 col-xl-1 col-xxl border">
 
-        </div>
-    </div>
-</xmp>
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
 <h1>Responsive images</h1>
 <h5>You can have an image change size as the page resizes with the 'img-fluid' class</h5>
     <div class="row">
-        <div class="mb-5 col">
+        <div class="mb-5 mx-auto col-10">
             <img class="img-fluid" src="static/house-sunrise.jpg">
         </div>
     </div>
 
-<xmp>
-    <div class="row">
-        <div class="mb-5 col">
-            <img class="img-fluid" src="static/house-sunrise.jpg">
-        </div>
-    </div>
-</xmp>
+<pre class="language-markup"><code>
+    &lt;div class="row">
+        &lt;!--mx-auto centers the div in the row-->
+        &lt;!--col-10 sets the width of the col to 10/12ths to the row-->
+        &lt;div class="mx-auto col-10">
+            &lt;!--img-fluid pushes the image out to the edges of the containing col-->
+            &lt;img class="img-fluid" src="static/house-sunrise.jpg">
+        &lt;/div>
+    &lt;/div>
+</code></pre>
 
 
 
@@ -352,5 +356,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script type="text/javascript" src="scripts/prism.js"></script>
 </body>
 </html>

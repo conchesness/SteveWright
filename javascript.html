@@ -7,6 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="static/styles.css">
+  <link rel="stylesheet" href="static/prism.css">
   <title>OT CS Capstone</title>
 </head>
 <body>
@@ -27,23 +28,23 @@
         Put this code right after your bootstrap javascript code at the bottom of the page right before the closing body tag.
         <br><br>
         <p><b>Include this in every html file</b></p>
-        <xmp>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-          <script type="text/javascript" src="scripts/scripts.js"></script>
-        </xmp>
+<pre class="language-markup"><code>
+  &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">&lt;/script>
+  &lt;script type="text/javascript" src="scripts/scripts.js">&lt;/script>
+</code></pre>
         <p><b>javascript.js code</b></br>
         <small>notice "views/" and "scripts/scripts.js". If you do different names for files and folders be sure to change
           the references in this file.</small></p>
-        <xmp>
-          $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-              var file = 'views/' + $(this).data('include') + '.html'
-              $(this).load(file)
-            })
-            document.title = "OT CS Capstone"
-          })
-        </xmp>
+<pre class="language-javascript"><code>
+  $(function () {
+    var includes = $('[data-include]')
+    $.each(includes, function () {
+      var file = 'views/' + $(this).data('include') + '.html'
+      $(this).load(file)
+    })
+    document.title = "OT CS Capstone"
+  })
+</code></pre>>
 
       </li>
       <li>
@@ -52,7 +53,9 @@
       </li>
       <li>
         On the page where you want the navber to show up place this code:
-        <xmp><div data-include="nav"></div></xmp>
+<pre class="language-markup"><code>
+  &lt;div data-include="nav">&lt;/div>
+</code></pre>
       </li>
     </ol>
 
@@ -82,54 +85,54 @@
     </div>
 
     <p><b>The script triggers when the pulldown changes</b></p>
-    <xmp>
-      <form>
-        Change the dropdown to see it work! <br>
-        <select class="form-select" name="divdropdown" id="divdropdown">
-          <option selected>---</option>
-          <option value="div1">div1</option>
-          <option value="div2">div2</option>
-          <option value="both">both</option>
-        </select>
-      </form>
-    </xmp>
+<pre class="language-markup"><code>
+  &lt;form>
+    Change the dropdown to see it work! &lt;br>
+    &lt;select class="form-select" name="divdropdown" id="divdropdown">
+      &lt;option selected>---&lt;/option>
+      &lt;option value="div1">div1&lt;/option>
+      &lt;option value="div2">div2&lt;/option>
+      &lt;option value="both">both&lt;/option>
+    &lt;/select>
+  &lt;/form>
+</code></pre>
     <p>
       <b>These are the divs.</b><br>
       <small>Pay attention to the ID names.</small>
     </p>
-    <xmp>
-      <div class="border bg-primary" id="div1">
-        <h1>This is Div 1</h1>
-      </div>
-  
-      <div class="border bg-secondary" id="div2">
-        <h1>This is Div 2</h1>
-      </div>
-      </xmp>  
-      <p><b>The is the javascript code that goes at the bottom of the page.</b></p>
-      <xmp>
-        <script type="text/javascript">
+<pre class="language-markup"><code>
+  &lt;div class="border bg-primary" id="div1">
+    &lt;h1>This is Div 1&lt;/h1>
+  &lt;/div>
 
-          jQuery(document).ready(function() {
-            $('#div1').hide();
-            $('#div2').hide();
-    
-            $("#divdropdown").change(function() {
-              if($(this).val().toLowerCase() == 'div1') {
-                $('#div1').show();
-                $('#div2').hide();
-              } else if ($(this).val().toLowerCase() == 'div2') {
-                $('#div2').show();
-                $('#div1').hide();            
-              } else if ($(this).val().toLowerCase() == 'both') {
-                $('#div2').show();
-                $('#div1').show();  
-              }
-            }); 
-         });
-        
-        </script>
-    </xmp>
+  &lt;div class="border bg-secondary" id="div2">
+    &lt;h1>This is Div 2&lt;/h1>
+  &lt;/div>
+</code></pre>
+      <p><b>The is the javascript code that goes at the bottom of the page.</b></p>
+<pre class="language-javascript"><code>
+  &lt;script type="text/javascript">
+
+    jQuery(document).ready(function() {
+      $('#div1').hide();
+      $('#div2').hide();
+
+      $("#divdropdown").change(function() {
+        if($(this).val().toLowerCase() == 'div1') {
+          $('#div1').show();
+          $('#div2').hide();
+        } else if ($(this).val().toLowerCase() == 'div2') {
+          $('#div2').show();
+          $('#div1').hide();            
+        } else if ($(this).val().toLowerCase() == 'both') {
+          $('#div2').show();
+          $('#div1').show();  
+        }
+      }); 
+    });
+  
+  &lt;/script>
+</code></pre>
 
   </div>
 
@@ -137,6 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="scripts/scripts.js"></script>
+    <script type="text/javascript" src="scripts/prism.js"></script>
     <script type="text/javascript">
 
       jQuery(document).ready(function() {
