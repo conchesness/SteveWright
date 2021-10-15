@@ -76,6 +76,15 @@
 
   <div class="mb-5" id="results"></div>
 
+  table <br>
+  <table class="table">
+    <tr><td>Email:</td><td id="emailid"></td></tr>
+    <tr><td>Number:</td><td id="numid"></td></tr>
+    <tr><td>Colors:</td><td id="colorsid"></td></tr>
+    <tr><td>Write Stuff:</td><td id="writestuffid"></td></tr>
+  </table>
+
+
   <p><a href="conditionalforward.html">Another example that forwards to a new page based on form results</a></p>
 
 <h3 mb-0 mt-5>The form code</h3>
@@ -167,6 +176,10 @@
 
       jQuery(document).ready(function() {
         $("#results").html(output); 
+        $("#emailid").html(email); 
+        $("#numid").html(pickanum); 
+        $("#colorsid").html(colors); 
+        $("#writestuffid").html(writestuff); 
       });
 
     </script>
